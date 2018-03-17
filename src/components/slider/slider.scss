@@ -1,0 +1,147 @@
+.slider {
+  position: relative;
+
+  &--products {
+    .slick-prev {
+      left: 0;
+      &:before {
+
+      }
+    }
+
+    .slick-next {
+      right: 0;
+      &:before {
+      }
+    }
+    .slick-list {
+      margin-left: -14px !important;
+      height: 100%;
+    }
+    .slick-slide {
+      margin-left: 14px;
+      border-left: 1px #e0e0e0 solid;
+      border-right: 1px #e0e0e0 solid;
+      border-radius: 0;
+      box-shadow: none;
+      background: #fefefe;
+    }
+  }
+  &--products {
+
+  }
+  &--fullwidth {
+    .slick-list {
+
+    }
+    .slick-slide {
+
+    }
+  }
+  &--home{
+    border-top: 5px $color-orange-300 solid;
+    border-bottom: 5px $color-orange-300 solid;
+  }
+}
+
+.slick-slide {
+  display: flex !important;
+  height: auto !important;
+  &:focus {
+    outline: none;
+  }
+}
+
+.slick-dots {
+  margin: 0;
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  justify-content: center;
+  li {
+    padding: 5px 15px;
+    list-style: none;
+  }
+  button {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background: $color-red-400;
+    font-size: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .slick-active {
+    button {
+      background: $color-red-800;
+    }
+  }
+}
+
+.slick-list {
+  height: 100%;
+}
+
+.slick-track {
+display: flex !important;
+}
+
+.slick-slide {
+  overflow: hidden;
+}
+
+.slick-slide img {
+  min-width: 100%;
+  height: auto;
+}
+
+.slick-arrow {
+  width: 40px;
+  height: 90px;
+  border-radius: 4px;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1;
+  &:hover {
+    opacity: 1;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:before, &:after {
+    font-size: 90px;
+    font-weight: 900;
+    font-family: FontAwesome;
+    color: $color-green-400;
+  }
+}
+
+.slick-prev {
+  left: 25px;
+  right: initial;
+  &:before {
+    content: '\f104';
+  }
+}
+
+.slick-next {
+  left: initial;
+  right: 25px;
+  &:before {
+    content: '\f105';
+  }
+}
+
+.product-slider {
+  max-width: 600px;
+}
